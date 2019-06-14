@@ -1,0 +1,2 @@
+﻿CREATE DATABASE SQL_Library
+GO
