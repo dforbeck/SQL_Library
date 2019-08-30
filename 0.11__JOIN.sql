@@ -1,6 +1,3 @@
-﻿--Seed the dataset
-SET IDENTITY_INSERT Purchases ON
-INSERT Purchases (PurchaseID, ProductID, CustomerID, Quantity) 
-    VALUES (1, 1, 1, 5),
-    (2, 1, 2, 5),
-    (3, 2, 4, 3);
+﻿SELECT Customer.CustomerID, Customer.FirstName, Purchases.PurchaseID
+FROM Purchases
+INNER JOIN Customer ON Purchases.CustomerID=Customer.CustomerID;
