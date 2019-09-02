@@ -1,7 +1,6 @@
 ﻿CREATE TABLE dbo.Course
 	(
-	CourseID int PRIMARY KEY NOT NULL,
-	EnrollmentId int NOT NULL,
+	CourseID int PRIMARY KEY NOT NULL,	
 	Title varchar(25) NOT NULL,
 	Credits int NOT NULL,
 		);
@@ -9,12 +8,12 @@
 CREATE TABLE dbo.Student
 	(
 	StudentId int PRIMARY KEY NOT NULL,
-	EnrollmentId int NOT NULL,
 	LastName varchar(25) NOT NULL,
 	FirstName varchar(25) NOT NULL,
 	EnrollmentDate date NOT NULL
 	);
 
+--still to do below
 CREATE TABLE dbo.Enrollment
 	(
 	EnrollmentId int PRIMARY KEY NOT NULL,
@@ -28,4 +27,3 @@ CREATE TABLE dbo.Enrollment
 	CONSTRAINT [FK_dbo.Enrollment_dbo.Student_StudentId] FOREIGN KEY ([StudentId])
         REFERENCES [dbo].[Student]([StudentId]) ON DELETE CASCADE
 	);
-
